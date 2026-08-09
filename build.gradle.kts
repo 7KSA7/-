@@ -1,9 +1,12 @@
 // Root build.gradle.kts
 plugins {
-    id("com.android.application") version "8.4.2" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.23" apply false
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.google.devtools.ksp) apply false
+    alias(libs.plugins.roborazzi) apply false
+    alias(libs.plugins.secrets) apply false
 }
 
 tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }
