@@ -1,0 +1,6 @@
+{
+  "name": "VIP PROTECTION",
+  "description": "A powerful, privacy-first, multi-layer Android security platform developed by VO + QASSAM.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
