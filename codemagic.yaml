@@ -1,0 +1,27 @@
+workflows:
+  android-workflow:
+    name: Android Release Workflow
+    max_build_duration: 60
+    instance_type: mac_mini_m1
+    environment:
+      java: 17
+      groups:
+        - keystore_credentials
+      vars:
+        PACKAGE_NAME: "com.aistudio.vipprotection.secsuite"
+    scripts:
+      - name: Set up local.properties
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+      - name: Build Android APK
+        script: |
+          chmod +x gradlew
+          ./gradlew assembleRelease
+      - name: Build Android App Bundle (AAB)
+        script: |
+          chmod +x gradlew
+          ./gradlew bundleRelease
+    artifacts:
+      - app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.aab
+      - app/build/outputs/**/mapping.txt
