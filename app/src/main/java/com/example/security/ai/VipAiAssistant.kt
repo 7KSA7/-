@@ -1,6 +1,7 @@
 package com.example.security.ai
+package com.example.security.ai
 
-import com.example.BuildConfig
+import com.aistudio.vipprotection.secsuite.BuildConfig
 import com.example.security.network.WebsiteScanResult
 import com.example.security.network.WebsiteSafetyStatus
 import kotlinx.coroutines.Dispatchers
