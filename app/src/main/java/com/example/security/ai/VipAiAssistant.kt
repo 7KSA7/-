@@ -1,5 +1,4 @@
 package com.example.security.ai
-package com.example.security.ai
 
 import com.aistudio.vipprotection.secsuite.BuildConfig
 import com.example.security.network.WebsiteScanResult
